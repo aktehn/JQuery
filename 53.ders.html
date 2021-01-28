@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>53.Ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+
+</head>
+<style>
+    table{
+        border: 1px solid black;
+    }
+    tr{
+        text-align: center;
+    }
+    td,th{
+        border: 1px solid black;
+        padding: 3rem;
+    }
+</style>
+
+<body>
+    <div>
+        <p id="p1" class="c1">Hello world how are you? my name is Aykut</p>
+        <p id="p2" class="c1">Hello world how are you?</p>
+        <p id="p3" class="c3">Hello world how are you?</p>
+        <p id="p4" class="c4">Hello world how are you?</p>
+    </div>
+    <table collspacing="0" border="1px">
+        <thead>
+            <tr>
+                <th>Ad/Soyad</th>
+                <th>Yaş</th>
+                <th>Meslek</th>
+            </tr>
+            <tr>
+                <td>Doruk Akgül</td>
+                <td>24</td>
+                <td>Mühendis</td>
+            </tr>
+            <tr>
+                <td>Mehmet Akgül</td>
+                <td>20</td>
+                <td>İnşaat işçisi</td>
+            </tr>
+            <tr>
+                <td>Ali Akgül</td>
+                <td>25</td>
+                <td>Öğretmen</td>
+            </tr>
+            <tr>
+                <td>Veli Akgül</td>
+                <td>23</td>
+                <td>Öğretmen</td>
+            </tr>
+        </thead>
+    </table>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuary</li>
+    </ul>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuary</li>
+    </ul>
+
+    <a href="https://www.google.com.tr" target="_blank">Google</a>
+    <br><br>
+
+    <button id="btn">Tıkla</button>
+
+
+    <script>
+        
+        $(function () {
+
+           $("#btn").click (function() {
+
+            // $("p").css("color","red");= tüm p elemanlarını seçer
+            // $("#p1").css("color","red");= p1 ID li elementleri seçer
+            // $(".c1").css("color","red");= c1 clash ına sahip elementleri seçer
+            // $(*).css("color","red");= tüm HTML elementlerini seçer
+            // $(this).css("color","red");= btn ID li elementi seçer
+            // $("p.c1").css("color","red");= p elementlerinden c1 klaslı elemanı seçer
+            // $("#p2.c1").css("color","red");= ID si p2 ve clashı c1 olan elementi seçer
+            // $("p:first").css("color","red");= P elementlerinden ilkini seçer
+            // $("p:last").css("color","red");= P elementlerinden sonuncusunu seçer
+            // $("ul li:first").css("color","red"); = UL elementinin altındaki Lİ lerden ilkini seçer
+            // $("ul li:first-child").css("color","red"); = UL elementinin altındaki bütün Lİ lerin ilk elemanını seçer
+            // $("[href]").css("color","red"); = href artibutune sahip elementi seçer (tüm artubutlar için yapılabilir)
+            // $("p:contains('my name is Aykut')").css("color", "red"); p elementlerinden "my name is Aykut" içeren tüm elemanları seçer
+            // $("p:not(#p1)").css("color", "red");= p elementlerinden ID si p1 olmayan tüm elemanları seçer
+            $(".c1,#p4,ul").css("color", "red");
+
+           });
+
+        });
+        
+        
+
+
+    </script>
+</body>
+</html>
