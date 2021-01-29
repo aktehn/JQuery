@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>54.Ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+    <style>
+        #div1{
+            width: 100%;
+            height: 400px;
+            background-color: blue;
+        }
+        #div2{
+            width: 30%;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+<body>
+    <div id="div1">
+        <div id="div2">
+    
+        </div>
+    </div>
+    <br>
+    <input type="text" id="txt">
+    <br><br>
+    <button id="btn">Tıkla</button>
+
+    <script>
+        $(function(){
+
+           /* == butona tıkalyınca arkaplan resmi kırmızı olur==
+            $("#btn").click(function(){
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* == butona iki defa tıklayınca arkapılan resmi kırmızı olur==
+            $("#btn").dblclick(function () {
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* == mouse ile div1 ID li alana girince arkapılan rengi kırmızı olur==
+            $("#div1").mouseenter(function () {
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* == mouse ile div1 ID li alandan çıkınca arkapılan rengi tekrardan mavi olur==
+            $("#div1").mouseleave(function () {
+                $("#div1").css("background-color", "blue");
+            });*/
+
+            /* ==mouse üzerine gelince arkaplan rengi kırmızı olur==
+            $("#div1").mouseover(function () {
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* == mouse üzerinden gidince arkapılan rengi tekraradan mavi olur==
+            $("#div1").mouseout(function () {
+                $("#div1").css("background-color", "blue");
+            });*/
+
+            /* ==CSS deki hover olayı gibi mouse üzerine gelince kırmızı olur==
+            $("#div1").hover(function () {
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* ==text alanının içine bir şey yazdığımızda arkapılan rebgi kırmızı olur==
+            $("#txt").keypress(function () {
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* == text alanına yazıp elimizi kaldırdıktan sonra arkapılan rengi kırmızı olur==
+            $("#txt").keyup(function () {
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* ==text alanına dokunduğumuz gibi arkapılan rengi siyah olur==
+            $("#txt").keydown(function () {
+                $("#div1").css("background-color", "black");
+            });*/
+            $("#txt").keydown(function () {
+                $("#div1").css("background-color", "black");
+            });
+
+        });
+    </script>
+</body>  
+</html>
