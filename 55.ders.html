@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>55.Ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    #div1{
+        width: 100%;
+        height: 200px;
+        background-color: yellow;
+        overflow: scroll;
+    }
+</style>
+<body>
+    <div id="div1">
+        <p>aykut dağ</p>
+        <p>aykut dağ</p>
+        <p>aykut dağ</p>
+        <p>aykut dağ</p>
+        <p>aykut dağ</p>
+        <p>aykut dağ</p>
+        <p>aykut dağ</p>
+        <p>aykut dağ</p>
+    </div>
+    <p id="p1"></p>
+    <br>
+    <form action="" id="frm" style="margin-left: 50px;">
+        <input type="text" id="text1" placeholder="kullanıcı adı" value="javascript"><br>
+        <input type="password" id="password1" placeholder="parola"><br>
+        kadın <input type="radio" id="radio1" name="cinsiyet"><br>
+        erkek <input type="radio" id="radio1" name="cinsiyet"><br><br>
+        <input type="submit" id="btn" value="submit">
+    </form>
+
+    <script>
+
+        var x = 0;
+
+        $(function() {
+            /* == butona tıkladıktan sonra div1 ID li kısmın arkapılan rengi mavi olur.
+            $("#frm").submit(function () {
+                $("#div1").css("background-color", "blue");
+            });*/
+
+            /* ==butona tıkladıktan sonra uyarı kutusuna form kaydedildi yazısı çıkar.
+            $("#frm").submit(function () {
+                alert("form kaydedildi")
+            });*/
+
+            /* ==value içine yazdığımız yazıya her hangi bir yazı eklediğimizde ve her hangi bir yere tıklayınca arkaplan rengi kırmızı olur.
+            $("#text1").change(function () {
+                $("#div1").css("background-color", "red");
+            });*/
+
+            /* == focus ile text alanındaki input a basınca arkapılan rengi kırmızı olur.
+                  herhangi bir yere basınca blur ile arkaplan rengi siyah olur.
+            $("#text1").focus(function () {
+                $("#div1").css("background-color", "red");
+            });
+            $("#text1").blur(function () {
+                $("#div1").css("background-color", "black");
+            });*/
+
+            /* == text1 ID li alandaki yazıyı seçtiğimizde div1 ID li alanın arkaplan rengi siyah olur.
+            $("#text1").select(function () {
+                $("#div1").css("background-color", "black");
+            });*/
+
+            /* == Scrolu her hareket ettiğimizde p1 ID li kısmın sayısal değeri sürekli artıyor.
+            $("#div1").scroll(function () {
+                $("#p1").text(x += 1);
+            });*/
+
+            //var genislik = $(window).width();
+            //var yukseklik = $(window).height();
+            
+//            $("#p1").text("Genişlik: " + genislik +"\nYükseklik: " + yukseklik);
+            $(window).resize(function () {
+                var genislik = $(window).width();
+                var yukseklik = $(window).height();
+                $("#p1").text("Genişlik: " + genislik + "\nYükseklik: " + yukseklik);
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>
