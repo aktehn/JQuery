@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>56.ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+    <style>
+        #div1{
+            width: 100%;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+<body>
+    <div id="div1">
+
+    </div>
+    <br><br>
+    <button id="btn" type="button">Tıkla</button>
+    
+    <script>
+
+        
+        $(function() {
+            
+            $("#div1").on({// on yerine one yazdığımızda olay sadece bir defa çalışır
+
+                click: function () {//üzerine tıklayınca yeşil olur
+                    $("#div1").css("background-color", "green")
+                },
+                mouseenter: function () { // üzerine gelince kırmızı olur
+                    $("#div1").css("background-color", "red")
+                },
+                mouseleave: function () { //üzerinde çıkınca siyah olur
+                    $("#div1").css("background-color", "black")
+                }
+
+            });
+
+            $("#btn").click(function() {//butona tıklayınca yukarıda verdiğimiz click özelliği kaybolur
+                $("#div1").off("click");
+            });
+
+        });
+
+    </script>
+</body>
+</html>
