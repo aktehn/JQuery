@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58.ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    #div1{
+        border: 2px solid black;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div id="div1" class="deneme">
+        <p id="p1">Paragraf 1</p>
+        <p id="p2">Paragraf 2</p>
+        <p id="p3">Paragraf 3</p>
+        <p id="p4">Paragraf 4</p>
+    </div>
+
+    <br><br>
+    <button onclick="yazdir()" id="btn">Tıkla</button>
+    
+
+    <script>
+
+        /*$(function () {// her tıklamada div1 İD li divin soluna javascript öğreniyorum yazdırılır
+            $("#btn").click(function () {
+                $("#div1").append("javascript öğreniyorum..");
+            });
+        });*/
+
+        /*$(function () {// her tıklamada div1 İD li divin başına javascript öğreniyorum yazdırılır
+            $("#btn").click(function () {
+                    $("#div1").prepend("javascript öğreniyorum..");
+            });
+        });*/
+
+        /*$(function () {// her tıklamada div1 İD li divin sonuna javascript öğreniyorum yazdırılır
+            $("#btn").click(function () {
+                $("#div1").after("javascript öğreniyorum..");
+            });
+        });*/
+
+        /*$(function () {// her tıklamada div1 İD li divin başına javascript öğreniyorum yazdırılır
+            $("#btn").click(function () {
+                $("#div1").before("javascript öğreniyorum..");
+            });
+        });*/
+
+        /*$(function () {// tıklandığında div1 ID li div silinir
+            $("#btn").click(function () {
+                $("#div1").remove();
+            });
+        });*/
+
+        /*$(function () {// tıklandığında div1 ID li div içindeki yazılar silinir
+            $("#btn").click(function () {
+                $("#div1").empty();
+            });
+        });*/
+
+        function yazdir() { // bu fonksiyonda divin sonuna t1, t2, t3 e ait yazılar sırası ile yazılır.
+            var t1 = "<p> p1'e ait Paragraf yazıldı</p>";
+            var t2 = $("<p></p>").text("p2 paragrafı yazdırıldı");
+            var t3 = document.createElement("p").innerHTML="p3'e ait paragraf yazdırıldı";
+
+            $("#div1").append(t1,t2,t3);
+        }
+
+    </script>
+</body>
+</html>
