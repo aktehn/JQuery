@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>59.ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    #div1{
+        border: 2px solid black;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div id="div1" class="deneme">
+        <p id="p1">paragraf1</p>
+        <p id="p2">paragraf2</p>
+        <p id="p3">paragraf3</p>
+        <p id="p4">paragraf4</p>
+    </div>
+    <div></div>
+    <br><br>
+    <button id="btn" type="button">Tıkla</button>
+
+
+    <script>
+       /*$(function () {//tıkla butonuna bastığımızda div in sonuna "yeni paragraf yazılır."
+            $("#btn").click(function () {
+                $("#div1").append("<p>Yeni Paragraf</p>")
+            });
+        });*/
+
+        /*$(function () {//appentTo içinde verdiğimiz div1 Id li div in sonuna "yeni paragraf yazılır."
+            $("<p>Yeni Paragraf</p>").appendTo("#div1");
+        });*/
+
+        /*$(function () {//prepentTo içinde verdiğimiz div1 Id li div in başına "yeni paragraf yazılır."
+            $("<p>Yeni Paragraf</p>").prependTo("#div1");
+        });*/
+        //insertAfter ile divden sonra, insertBefore ile divden önce yazılır
+        // p ye id vb HTML özellikler verebiliriz
+
+        $(function () {// Tıkla butonuna bastığımızda div1 Id li divin sonuna p1 Id li paragraf eklenir
+            $("#btn").click(function () {
+                $("#p1").clone().appendTo("#div1");
+            })
+        });
+
+
+    </script>
+
+    
+</body>
+</html>
