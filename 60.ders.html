@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60.ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    #div1{
+        border: 2px solid black;
+        padding: 10px;
+    }
+    .red{
+        background-color: red;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .beyazYazi{
+        color: white;
+    }
+</style>
+<body>
+    <div id="div1" class="deneme">
+        <p id="p1">paragraf 1</p>
+        <p id="p2">paragraf 2</p>
+        <p id="p3">paragraf 3</p>
+        <p id="p4">paragraf 4</p>
+    </div>
+    <br><br>
+    <button id="btn" type="button">Tıkla</button>
+
+    <script>
+
+        /*$("#btn").click(function () { // bu özellik ile pelirttiğimiz Id ye ait elemente clas veya claslar atayabiliriz.
+            $("#p1").addClass("blue beyazYazi");
+        });*/
+
+        // var olan artibütü silmek için removeAttr kullanırız
+        // var olan clası silmek için removeClass ile silebiliriz
+        
+        /*$("#btn").click(function () {// tıklama ile p1 Id li elemente class ekleriz ve tekrar tıkladığımızda eklediğimiz class ı sileriz.
+            $("#p1").toggleClass("red");
+        });*/
+
+        /*$(function () { // tıklandığında p1 Id li elementin renk kodu uyarı kutusuna yazılır.
+           $("#btn").click(function () {
+                var a = $("#p1").css("color");
+                alert(a);
+            }); 
+        });*/
+
+        $(function () { // birden çok css özelliği eklemek için
+            $("#btn").click(function () {
+                $("#p1").css({
+                    "color": "red",
+                    "background-color": "yellow",
+                    "font-size": "40px"
+                });
+            });
+        });
+
+
+    </script>
+    
+</body>
+</html>
