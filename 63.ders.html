@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63.ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    .deneme{
+        display: block;
+        border: 2px solid lightgrey;
+        color: gray;
+        padding: 5px;
+        margin: 15px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div id="div1" class="deneme">
+        div = 5. ebeveyn
+        <div id="div2" class="deneme">
+            div = 4. ebeveyn
+            <ul class="deneme">
+                ul = 3. ebeveyn
+                <li class="deneme">
+                    li = 2. ebeveyn
+                    <p class="deneme">
+                        p = 1. ebeveyn
+                        <span class="deneme">
+                            Span
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="div3" class="deneme">
+            div ID = #div3
+            <div id="div4" class="deneme">
+                div ID = <div id="div4"></div>
+            </div>
+        </div>
+    
+        <h1 class="deneme">
+            H1 Alanı
+        </h1>
+    </div>
+    <br><br>
+    <button id="btn">Tıkla</button>
+
+
+    <script>
+
+        /*$(function () {// tıkla butonuna tıklandığında dıv1 ıd li divin tüm çocuklarını seçer
+            $("#btn").click(function () {
+                $("#div1").children().css({
+                    "border": "2px solid blue",
+                    "color": "blue"
+                });
+            });
+        });*/
+
+        /*$(function () {// tıkla butonuna tıklandığında dıv1 ıd li divin h1 cocuğunu seçer.
+            $("#btn").click(function () {
+                $("#div1").children("h1").css({
+                    "border": "2px solid blue",
+                    "color": "blue"
+                });
+            });
+        });*/
+
+        $(function () {// bu özellik ile tıkla butonuna tıkladığımızda div1 id li elemanın altındaki span elemanını( yada istediğimiz her hangi bir elementi) seçiyoruz
+            $("#btn").click(function () {
+                $("#div1").find("span").css({
+                    "border": "2px solid blue",
+                    "color": "blue"
+                });
+            });
+        });
+
+    </script>
+    
+</body>
+</html>
