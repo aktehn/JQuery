@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>66.ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    .deneme{
+        width: 100%;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+</style>
+<body>
+    <div id="div1" class="deneme" style="background-color: blue;"></div>
+    <div id="div2" class="deneme" style="background-color: red;"></div>
+    <div id="div3" class="deneme" style="background-color: green;"></div>
+
+    <br>
+    <button id="btn1" type="button">Show</button>
+    <button id="btn2" type="button">Hide</button>
+    <button id="btn3" type="button">Toggle</button>
+
+    <script>
+        /*$(function () { //hide butonuna tıklayınca ekrandaki ıd lerini yazdığımız divler kaybolur
+            $("#btn2").click(function () {// slow ve hide değerleri ile yavaş veya hızlı kaybolmasını sağlarız yada milisaniye cinsinden değerler vererek animasyonlu kaybolmasınıda sağlayabiliriz
+                $("#div1").hide();
+                $("#div2").hide();
+                $("#div3").hide();
+            });
+        });*/
+
+        $(function () { // burada milisaniye cinsinden animasyonlu gizleme yapıldı
+            $("#btn2").click(function () {
+                $("#div1").hide(5500);
+                $("#div2").hide(7500);
+                $("#div3").hide(9500);
+            });
+        });
+
+        $(function () { // hidden ile gizlediğimiz kısımları animasyonlu bir şekilde geri getiriyoruz
+            $("#btn1").click(function () {
+                $("#div1").show(5500);
+                $("#div2").show(7500);
+                $("#div3").show(9500);
+            });
+        });
+
+        $(function () { // toggle ile gizli ise gösterir gizli değilse gizler kısaca ikisinin işini tek başına yapar
+        $("#btn3").click(function () {
+                $("#div1").toggle(5500);
+                $("#div2").toggle(7500);
+                $("#div3").toggle(9500);
+            });
+        });
+
+    </script>
+    
+</body>
+</html>
