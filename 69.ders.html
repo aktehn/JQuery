@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>69 ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    .deneme{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 15px;
+        font-size: 32px;
+        position: relative;
+    }
+</style>
+<body>
+    <button type="button" id="btn">Animate</button>
+    <br><br><br>
+    <div id="div1" class="deneme" style="background-color: gray;">JavaScript</div>
+    
+
+    <script>
+
+        $(function () {
+            $("#btn").click(function () {
+                /*$("#div1").animate({
+                                    // butona tıkaldığımızda div1 id li divimiz animasyomlu bir şekilde verdiğimiz css özelliklerini uygular.
+                                    // rengini ve arkapılan rengi üzerinde animasyon ile her hangi bir değişiklik yapamayız
+                                    // genişlik ve yüksekliğe "toggle" özelliğide verebiliriz animasyonlu bir şekilde divimizi siler veya silinen divi geri getirir
+                    left: "150px",
+                    top: "150px",
+                    fontSize: "80px",
+                    width: "400px",
+                    height: "400px"
+                                    // birden fazla css müdahalesi yaptığımızda bunları virgül ile ayırmalıyız
+                                    // height: "400px" yerine height: "+=100px" deseydik her butona tıklandığında divimiz 100px büyürdü
+                                    // animasyon özelliği ile genişlik ve yüksekliğini arttırdığımız gibi azaltabilirizde
+                },3000);*/
+                                    // burada diğerleri gibi tüm değerler birlikte uygulanmıyor verdiğimiz değerler sırası ile uygulanır
+                $("#div1").animate({ height: "500px" }, 3000);
+
+                $("#div1").queue(function () { // birinci animasyondan sonra bu animasyonumuz devreye girer ve bu animasyon bitince diğer animasyonlar başlar
+                    $(this).css("background-color","yellow");
+                    $(this).dequeue (); // dequeue ile durdurduğumuz ikinci animasyonun devam etmesini sağlarız 
+                });// ve bu bunu her animasyondan sonra uygulayabiliriz
+
+                $("#div1").animate({ width: "500px" }, 3000);
+
+                $("#div1").queue(function () { 
+                    $(this).css("background-color", "red");
+                    $(this).dequeue();
+                });
+
+                $("#div1").animate({ height: "200px" }, 3000);
+
+                 $("#div1").queue(function () {
+                    $(this).css("background-color", "blue");
+                    $(this).dequeue();
+                });
+
+                $("#div1").animate({ width: "200px" }, 3000);
+            });
+        });
+
+    </script>
+</body>
+</html>
