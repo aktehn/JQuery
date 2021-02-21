@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>71.ders</title>
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <style>
+        .deneme{
+            width: 80%;
+            height: 350px;
+            background-color: blue;
+            margin: 20px;
+            position: relative;
+        }
+        #btn{
+            background-color: green;
+            color: white;
+            padding: 10px;
+            margin: 20px;
+            width: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div id="btn">Tıkla</div>
+    <div id="div1" class="deneme"></div>
+    
+
+    <script>
+
+        /*$(function () {// butona tıklandığında yazdığımız kodlar sırayla çalışır ve son kod da çalıştıktan sonra işlem sonlanır
+
+            $("#btn").click(function () {
+
+                $("#div1").hide(4000, function () {
+                    
+                    $(this).show(4000, function () {
+
+                        $(this).fadeOut(4000, function () {
+
+                            $(this).fadeIn(4000, function () {
+
+                                $(this).slideUp(4000, function () {
+
+                                    $(this).slideDown();
+                                    
+                                });
+                                
+                            });
+                            
+                        });
+                        
+                    });
+
+                });
+                
+            });
+
+        });*/
+
+        $(function () {// javascript ile yazdığımız kod sayesinde butona tıklandığında yazdığımız kodlar sırayla çalışır ve son koda geldikten sonra durmaz ve yine baştan çalışmaya başlar bu döngü biz bitirmeyene kadar sürekli devam eder
+            
+            $("#btn").click(function () {
+
+                setInterval(function () {
+
+                    $("#div1").hide(4000, function () {
+
+                        $(this).show(4000, function () {
+
+                            $(this).fadeOut(4000, function () {
+
+                                $(this).fadeIn(4000, function () {
+
+                                    $(this).slideUp(4000, function () {
+
+                                        $(this).slideDown();
+
+                                    });
+
+                                });
+
+                            });
+
+                        });
+
+                    });
+
+                }, 20000);
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>
