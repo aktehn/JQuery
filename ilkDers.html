@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlkDers</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <p class="1">merhaba dünya</p>
+    <p class="2">merhaba dünya</p>
+    <p class="3">merhaba dünya</p>
+    <p class="4">merhaba dünya</p>
+    <button id="btn">buton</button>
+    
+    <script>
+        $(function(){
+            // 'hide' parametresini kullandığımızda bastığımız yazı yok olur.
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            // 'css' parametresini kullandığımızda ise sitemizde her türlü css'e müdahale edebiliriz.
+            $("#btn").click(function(){
+                $(".1").css("color","blue")
+            });
+
+
+
+
+        });
+
+
+    </script>
+</body>
+</html>
